@@ -1,0 +1,154 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*10px*/
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5rem 10rem;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+.heading--thin, .heading--bold {
+  font-size: 2.4rem;
+}
+
+.heading--thin {
+  color: hsl(234, 12%, 34%);
+  font-weight: 200;
+}
+
+.heading--bold {
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 1.2rem;
+}
+
+.main--paragraph {
+  width: 30%;
+  margin: auto;
+  color: hsl(229, 6%, 66%);
+  font-weight: 200;
+
+}
+
+.card--container {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(20rem,1fr));
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,.1);
+  padding: 2rem ;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: min-content min-content 1fr;
+}
+
+.card--title {
+  grid-column: 1/ -1;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 1rem;
+}
+
+
+.card--desc {
+  font-size: .95rem;
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+  grid-column: 1/ 4;
+  margin-bottom: 2rem;
+
+}
+
+.card--icon {
+  height: 4rem;
+  width: 4rem;
+  grid-column: 3/4;
+  grid-row: 3 / -1;
+  justify-self: end;
+  align-self: end;
+}
+
+.card--1, .card--4 {
+  transform: translateY(50%);
+}
+
+.card--3 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.card--1 {
+  border-top: 2.5px solid hsl(180, 62%, 55%);
+}
+.card--2 {
+  border-top: 2.5px solid hsl(0, 78%, 62%);
+}
+
+.card--3 {
+  border-top: 2.5px solid hsl(34, 97%, 64%);
+}
+
+.card--4 {
+  border-top: 2.5px solid hsl(212, 86%, 64%);
+}
+
+.attribution {
+  text-align: center;
+  color: hsl(229, 6%, 66%);
+  margin-top: 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .card--1, .card--4 {
+    transform: translateY(0);
+  }
+
+  .card--3 {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .main--paragraph {
+    width: 80%;
+  }
+
+  body {
+    padding: 2.5rem 5rem;
+  }
+
+  .heading--thin, .heading--bold {
+    font-size: 2rem;
+  }
+
+
+
+  .heading {
+    padding-top: 4rem;
+  }
+
+}
